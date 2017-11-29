@@ -1,0 +1,21 @@
+Package: vsea
+Type: Package
+Title: Variant Set Enrichment Analysis
+Version: 0.1
+Date: 2017-11-29
+Author@R: person("Boxiang","Liu",email="jollier.liu@gmail.com",
+                role=c("aut","cre"))
+Description: VSEA estimates the enrichment of overlap between genetic variants 
+            and genomic regions. It does this by selecting matched control 
+            variants and estimate the odds ratio between the probability of 
+            overlap between the foreground variants and genomic regions and that 
+            of the background variants. To account for LD, VSEA selects LD 
+            proxies based on 1000 Genomes phase 3 data. VSEA takes as input a 
+            set of genetic variants, and a set of genomic regions. It outputs
+            the enrichment, standard error of the enrichment, and enrichment 
+            P-value. 
+License: GPL-3
+Imports: foreach,
+    doMC,
+    data.table,
+    sinib
