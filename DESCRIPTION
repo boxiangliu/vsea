@@ -15,7 +15,11 @@ Description: VSEA estimates the enrichment of overlap between genetic variants
             the enrichment, standard error of the enrichment, and enrichment 
             P-value. 
 License: GPL-3
+URL: https://github.com/boxiangliu/vsea
+BugReports: https://github.com/boxiangliu/vsea/issues
 Imports: foreach,
     doMC,
     data.table,
-    sinib
+    sinib,
+    stringr
+RoxygenNote: 6.0.1
