@@ -72,3 +72,13 @@ calc_odds_ratio=function(overlap){
     sd=sd(odds_ratio)
     return(data.table(mean=mean,sd=sd))
 }
+
+
+#' Count overlap between variant and region
+#' @param overlap The object returned by overlap
+#' @return The number of overlap
+#' @example
+#' count_overlap(overlap)
+count_overlap=function(overlap){
+    sum(overlap[foreground_variant==background_variant]$loci_overlap)
+}
