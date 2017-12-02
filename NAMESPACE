@@ -1,6 +1,10 @@
 exportPattern("^[[:alpha:]]+")
 import(data.table)
+<<<<<<< HEAD
 import(doMC)
+=======
+imoprt(doMC)
+>>>>>>> 6deab98fd8fb50dc449683174cfee9ea8bed318e
 import(stringr)
 import(foreach)
 import(sinib)
