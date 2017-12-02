@@ -12,11 +12,17 @@ registerDoMC(10)
 read_snpsnap=function(population=c('EUR','EAS','WAFR')){
     population=match.arg(population)
     package_path=path.package('vsea')
+    
     snpsnap_fn=sprintf('%s/inst/extdata/%s/kb1000_collection.tab.gz',package_path,population)
     
     if (!file.exists(snpsnap_fn)) {
         message('INFO - downloading SNPsnap')
-        url=sprintf('https://data.broadinstitute.org/mpg/snpsnap/database/%s/kb1000/kb1000_collection.tab.gz',population)
+        if (population=='AFR'){
+            url='https://data.broadinstitute.org/mpg/snpsnap/database/WAFR/kb1000/kb1000_collection.tab.gz')
+        } else {
+            url=sprintf('https://data.broadinstitute.org/mpg/snpsnap/database/%s/kb1000/kb1000_collection.tab.gz',population)
+        }
+
         
         if (!dir.exists(dirname(snpsnap_fn))){
             dir.create(dirname(snpsnap_fn))
