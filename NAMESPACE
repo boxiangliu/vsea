@@ -1,2 +1,6 @@
 exportPattern("^[[:alpha:]]+")
 import(data.table)
+imoprt(doMC)
+import(stringr)
+import(foreach)
+import(sinib)

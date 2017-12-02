@@ -1,7 +1,7 @@
 # Select background variants
 # Boxiang Liu (bliu2@stanford.edu)
 # 2017-11-15
-registerDoMC(10)
+doMC::registerDoMC(10)
 
 #' Load the SNPsnap dataset (https://data.broadinstitute.org/mpg/snpsnap/). If the dataset does not exist on the local computer, it will be downloaded. The file size is ~1G.  
 #' 
