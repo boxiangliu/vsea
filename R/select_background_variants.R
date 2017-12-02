@@ -18,7 +18,7 @@ read_snpsnap=function(population=c('EUR','EAS','WAFR')){
     if (!file.exists(snpsnap_fn)) {
         message('INFO - downloading SNPsnap')
         if (population=='AFR'){
-            url='https://data.broadinstitute.org/mpg/snpsnap/database/WAFR/kb1000/kb1000_collection.tab.gz')
+            url='https://data.broadinstitute.org/mpg/snpsnap/database/WAFR/kb1000/kb1000_collection.tab.gz'
         } else {
             url=sprintf('https://data.broadinstitute.org/mpg/snpsnap/database/%s/kb1000/kb1000_collection.tab.gz',population)
         }
